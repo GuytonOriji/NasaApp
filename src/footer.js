@@ -13,7 +13,8 @@ import styled from 'styled-components';
         background-color:#282c34;        
         height:auto;
         width:100%;
-        `;
+         box-shadow:3px 0 5px #000;
+    `;
 
 
         const Soci = styled.ul`
@@ -22,7 +23,7 @@ import styled from 'styled-components';
         flex-direction:row;
         justify-content:space-around;
         text-shadow:0 0 5px azure;
-        font-size:2.5rem;
+        font-size:2rem;
         -webkit-text-fill-color:azure;
         color:azure;
         font-weight:bolder;

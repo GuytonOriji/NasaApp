@@ -12,6 +12,7 @@ import './App.css';
     console.log(props);
     
 
+
     const Titlez = styled.h1`
     font-size:5rem;
     font-weight:bolder;
@@ -45,13 +46,12 @@ const Cen = styled.div`
 
     const HoldingBlock = styled.div`
     flex:1;
-    width:100%;
-    height:100%;
     display:flex;
     justify-content:center;
-    align-items:center;
-
-    `;
+    align-items:flex-start; 
+    overflow-y:scroll;
+    height:2000px;
+  `;
 
 
     const Block = styled.div`
@@ -61,12 +61,13 @@ const Cen = styled.div`
     padding:10px;
     padding-bottom:0;
     width:700px;
-    height:800px;
+    height:900px;
     display:flex;
     flex-direction:column;
     justify-content:center;align-items:center;
     font-size:2rem;
     font-weight:bolder;
+    background-color:rgba(250,250,250,.3);
     `;
 
     
@@ -79,14 +80,15 @@ const Cen = styled.div`
                             <Block>
                                 
                                 <img className="imgg" src={props.img} alt="Picture Of the Day Image"/>
-                                <p>
-                                    <h2>This Is The Picture Of The Day</h2><hr />
+                                <div>
+                                    <h2>This Is The Picture Of The Day</h2>
+                                    <hr />
                                     <span>
                                         Pictures Taken By NASA are super real ok? <br />
                                         So If you make an account you will have to post <br />
                                         super real photos also alright?....cool.
                                     </span>
-                                </p>
+                                </div>
                                 
                                 <div><Btn>Login</Btn>  <Btn>Sign Up</Btn></div>
                                 

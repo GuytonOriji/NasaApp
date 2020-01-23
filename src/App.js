@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './header';
-import Axios from 'axios';
+import axios from 'axios';
 import Center from './center';
 import Footer from './footer';
 
@@ -14,20 +14,18 @@ function App() {
 
  let [picOfTheDay, setPod] = useState()
 
-function Pod(){
 
-  Axios.get("https://api.nasa.gov/planetary/apod?api_key=n2SjQzacGW1ut0ZIxQoy1bNNZGoGIX2RhigGdAWl")
+  axios.get("https://api.nasa.gov/planetary/apod?api_key=H58silTkK3hFIGRxDbvlKlk3LYS3Imk6czrMgcEB")
     .then(res=>{
       console.log(res.data)
-      setPod(picOfTheDay = res.data.img_src)
+      setPod(picOfTheDay = res.data.hdurl)
     })
-}
 
 
  
 
   return (
-    <div className="App" onLoad={Pod}>
+    <div className="App" >
      
 
       <Header className="App-header"/>
