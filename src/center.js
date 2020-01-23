@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import './App.css';
 
 
     
 
 
  export default function Center(props){
+
+
+    console.log(props);
+    
 
     const Titlez = styled.h1`
     font-size:5rem;
@@ -17,7 +21,7 @@ import styled from 'styled-components';
     `;
 
     const Btn = styled.button`
-    
+    width:200px;
     background-color:rgba(0,0,0,0);
     border:solid ;
     padding:5px 20px;
@@ -52,13 +56,20 @@ const Cen = styled.div`
 
     const Block = styled.div`
     
-    border:solid #000;
+    border:solid #fff;
+    border-radius:20px;
+    padding:10px;
+    padding-bottom:0;
     width:700px;
-    height:700px;
+    height:800px;
     display:flex;
-    flex-direction:column
-    
+    flex-direction:column;
+    justify-content:center;align-items:center;
+    font-size:2rem;
+    font-weight:bolder;
     `;
+
+    
 
                 return(
                     <Cen>
@@ -66,16 +77,20 @@ const Cen = styled.div`
                         <HoldingBlock>
 
                             <Block>
+                                
+                                <img className="imgg" src={props.img} alt="Picture Of the Day Image"/>
                                 <p>
-                                    ejofepfj peofoej pejf pejj ejgpe2 je g
-                                    ejgpe2 ejgpe2 egege ge 
-                                    gegeg egegegegegegeg wewe g gew ggewg egegege
+                                    <h2>This Is The Picture Of The Day</h2><hr />
+                                    <span>
+                                        Pictures Taken By NASA are super real ok? <br />
+                                        So If you make an account you will have to post <br />
+                                        super real photos also alright?....cool.
+                                    </span>
                                 </p>
                                 
-                                <Btn>Login</Btn>
-                                <Btn>Sign Up</Btn>
+                                <div><Btn>Login</Btn>  <Btn>Sign Up</Btn></div>
                                 
-                                <img  src={props.img} alt="Picture Of the Day Image"/>
+                                
                             </Block>
                             
                             </HoldingBlock>

@@ -19,6 +19,7 @@ import styled from 'styled-components';
     font-weight:bolder;
     -webkit-text-fill-color:azure;
     color:azure;
+    cursor:pointer;
     `;
 
     const Btn = styled.button`
@@ -30,6 +31,7 @@ import styled from 'styled-components';
     color:azure;
     font-weight:bolder;
     font-size:2rem;
+    cursor:pointer;
     `;
    
 

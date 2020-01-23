@@ -30,13 +30,18 @@ import styled from 'styled-components';
         
         `;
 
+
+        const Links = styled.li`
+        cursor:pointer;
+        `;
+
             return (
                     <Footz>
 
                         <Soci>
-                            <li>@Twitter</li>
-                            <li>@GitHub</li>
-                            <li>@YouTube</li>
+                            <Links>@Twitter</Links>
+                            <Links>@GitHub</Links>
+                            <Links>@YouTube</Links>
                         </Soci>
                     </Footz>
             )
