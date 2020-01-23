@@ -1,24 +1,38 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './header';
+import Axios from 'axios';
+import Center from './center';
+import Footer from './footer';
+
+
+
 
 function App() {
+
+
+ let [picOfTheDay, setPod] = useState()
+
+function Pod(){
+
+  Axios.get("https://api.nasa.gov/planetary/apod?api_key=n2SjQzacGW1ut0ZIxQoy1bNNZGoGIX2RhigGdAWl")
+    .then(res=>{
+      console.log(res.data)
+      setPod(picOfTheDay = res.data.img_src)
+    })
+}
+
+
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" onLoad={Pod}>
+     
+
+      <Header className="App-header"/>
+      <Center  img={picOfTheDay}/>
+      <Footer />
     </div>
   );
 }
